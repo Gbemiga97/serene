@@ -1,11 +1,15 @@
 "use client"
-import {useState, useEffect, createContext} from 'react'
+import {useState, useEffect, createContext, useContext} from 'react'
 import { motion, useMotionValue, useSpring } from 'framer-motion'
 import { useMediaQuery } from 'react-responsive'
 
 
 //create context 
 const CursorContext = createContext()
+
+//use cursor context
+export const useCursorContext = () => useContext(CursorContext)
+
 
 //Provider
  const CursorProvider = ({children}) => {
@@ -68,6 +72,7 @@ const CursorContext = createContext()
     </CursorContext.Provider>
   )
 }
+
 
 
 export default CursorProvider
