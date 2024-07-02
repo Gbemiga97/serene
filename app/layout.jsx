@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         <Transition />
         <Header />
         <PageTransition>
-        {children}
+          {children}
         </PageTransition>
        </CursorProvider>
         </body>

@@ -21,9 +21,8 @@ const PageTransition = ({children}) => {
                 delay: 1,
                 duration: 1,
                 ease: "easeIn"
-                }}}>
+                }}} />
             {children}
-        </motion.div>
     </AnimatePresence>
   )
 }
