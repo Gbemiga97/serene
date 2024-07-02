@@ -5,11 +5,15 @@ import { useCursorContext } from "./CursorContext"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import {AiOutlineMenu} from 'react-icons/ai' 
+import { useState } from "react"
+import MobileNav from "./MobileNav"
+import Nav from "./Nav"
 
 
 export const Header = () => {
 
     const {mouseEnterHandler, mouseLeaveHandler} = useCursorContext()
+    const [mobileNav, setMobileNav] = useState(false)
 
 
   return (
@@ -18,7 +22,7 @@ export const Header = () => {
         <div className="bg-secondary-100 mb-6 xl:mb-[50px] py-4 xl:py-0">
             topbar
         </div>
-        <div className="container mx-auto">
+        <div className="container mx-auto flex items-center justify-between px-6 ">
             {/* logo */}
             <div>
                 <Link href='/'>
@@ -26,8 +30,21 @@ export const Header = () => {
                 </Link>
             </div>
             {/* mobile nav trigger */}
-            <div className="xl:hidden cursor-pointer">
+            <button 
+            onClick={() => setMobileNav(true)}
+            className="xl:hidden cursor-pointer">
                 <AiOutlineMenu className="text-3xl text-primary" />
+            </button>
+            {/* mobile Nav */}
+            <motion.div
+            initial={{right: "-100%"}}
+            animate={{right: mobileNav ? 0 : "-100%"}}
+             className="fixed bg-primary top-0 bottom-0 right-0 w-[300px] xl:hidden z-50">
+                <MobileNav setMobileNav={setMobileNav} />
+            </motion.div>
+            {/* desktop nav */}
+            <div className="hidden xl:block">
+                <Nav />
             </div>
         </div>
     </header>
