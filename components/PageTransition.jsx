@@ -13,7 +13,7 @@ const PageTransition = ({children}) => {
   return (
     <AnimatePresence>
         <motion.div 
-        key={pathname} className="w-screen h-screen fixed z-30 bg-white top-0 pointer-events-none"
+        key={pathname} className="w-screen h-screen fixed z-30 xl:z-40 bg-white top-0 pointer-events-none"
         initial={{opacity: 1}} 
         animate={{
             opacity: 0, 
