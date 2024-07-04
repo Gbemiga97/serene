@@ -32,19 +32,27 @@ const Treatments = () => {
             x: 0,
             transition: { delay: 2, duration: 0.8, ease: "easeInOut" }
           }}
-          onMouseEnter={mouseEnterHandler}
-          onMouseLeave={mouseLeaveHandler}
+          
           className="flex flex-col items-start xl:max-w-[650px] text-center xl:text-left mx-auto">
-            <h2 className="h2 mb-6 mx-auto max-w-[540px] xl:max-w-none">
+            <h2
+            onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler}
+            className="h2 mb-6 mx-auto max-w-[540px] xl:max-w-none">
               Indulge in our Luxurious Treatments
             </h2>
-            <p className="lead max-w-[600px] mx-auto xl:mx-0">
+            <p
+            onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler}
+            className="lead max-w-[600px] mx-auto xl:mx-0">
             Tailored skincare solutions for a healthy complexion, offering customized care for radiant skin
             </p>
             {/* items */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] mb-14 mx-auto xl:mx-0">
               {/* item */}
-              <div className="flex-1 flex flex-col justify-center items-center xl:items-start">
+              <div 
+              onMouseEnter={mouseEnterHandler}
+              onMouseLeave={mouseLeaveHandler}
+              className="flex-1 flex flex-col justify-center items-center xl:items-start">
                 <div className="flex items-center gap-[12px] mb-2">
                   <div className="w-[14px] h-[14px] bg-accent rounded-tl-[28px] rounded-bl-[28px]
                   rounded-br-[22px] rounded-tr-[4px]" />
@@ -58,7 +66,10 @@ const Treatments = () => {
               </div>
               {/* end item */}
                {/* item */}
-               <div className="flex-1 flex flex-col justify-center items-center xl:items-start">
+               <div 
+               onMouseEnter={mouseEnterHandler}
+               onMouseLeave={mouseLeaveHandler}
+               className="flex-1 flex flex-col justify-center items-center xl:items-start">
                 <div className="flex items-center gap-[12px] mb-2">
                   <div className="w-[14px] h-[14px] bg-accent rounded-tl-[28px] rounded-bl-[28px]
                   rounded-br-[22px] rounded-tr-[4px]" />
@@ -72,7 +83,10 @@ const Treatments = () => {
               </div>
               {/* end item */}
                {/* item */}
-               <div className="flex-1 flex flex-col justify-center items-center xl:items-start">
+               <div 
+               onMouseEnter={mouseEnterHandler}
+               onMouseLeave={mouseLeaveHandler}
+               className="flex-1 flex flex-col justify-center items-center xl:items-start">
                 <div className="flex items-center gap-[12px] mb-2">
                   <div className="w-[14px] h-[14px] bg-accent rounded-tl-[28px] rounded-bl-[28px]
                   rounded-br-[22px] rounded-tr-[4px]" />
@@ -86,7 +100,10 @@ const Treatments = () => {
               </div>
               {/* end item */}
                {/* item */}
-               <div className="flex-1 flex flex-col justify-center items-center xl:items-start">
+               <div 
+               onMouseEnter={mouseEnterHandler}
+               onMouseLeave={mouseLeaveHandler}
+               className="flex-1 flex flex-col justify-center items-center xl:items-start">
                 <div className="flex items-center gap-[12px] mb-2">
                   <div className="w-[14px] h-[14px] bg-accent rounded-tl-[28px] rounded-bl-[28px]
                   rounded-br-[22px] rounded-tr-[4px]" />
@@ -101,7 +118,10 @@ const Treatments = () => {
               {/* end item */}
             </div>
             {/* btn */}
-            <button className="btn mx-auto xl:mx-0">
+            <button 
+            onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler}
+            className="btn mx-auto xl:mx-0">
               Discover more
             </button>
           </motion.div>
